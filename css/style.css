@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+html,body{
+    height: 100%;
+}
+*{
+    box-sizing: border-box;
+    color: inherit;
+    
+    } 
+body{
+    background-image: url("../images/bg1.png");
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    font-family: 'Roboto', sans-serif;
+    color: #474842;
+    font-size: 16px;
+    margin: 0;
+    min-width: 320px;
+    }
+#page{
+    max-width: 900px;
+    margin: 36px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.9);
+}
+header{background: rgba(0, 0 ,0 , 0.7);}
+header img{width:160px;}
+nav{background: #222;
+}
+nav button{position: absolute; top: 18px; right:18px;
+    outline: none;
+    padding: 0;
+    height: 12px;
+    background: transparent;
+    width: 38px;
+border:3px #FFF solid; border-left:none; border-right:none;
+display: none;
+border-radius: 0;
+}
+nav button::before{
+content: "";
+display: block;
+background: #FFF;
+height: 3px;
+margin-top:15px;
+}
+
+
+nav ul{  list-style-type: none; overflow: auto;padding: 4px; margin: 0; }
+nav ul li{ float: left; margin: 4px;}
+nav ul li a{border-radius: 4px;
+    background: #474745 ;
+    border:1px transparent solid;
+
+    color: #e1e1e1;text-decoration: none;padding: 8px 16px;display: block;}
+nav ul li a:hover{ border:1px #666 solid;color: #FFF;}
+
+#flex{display: flex;align-items: stretch;}
+article{
+    background:url("../images/article.png");
+    width: calc(100% - 300px);
+    padding: 0 16px 16px 16px;
+    min-height: 380px;
+}
+h1{font-weight: 500;font-size: 32px;margin: 6px 0;
+padding: 4px 2px;
+border-bottom:#474842 solid 3px ;}
+h2{font-weight: 500;font-size: 24px;margin: 4px 0;}
+
+aside{
+
+    background: #F4F4F4;
+    width: 300px;
+}
+#meteo{margin-top:56px;padding:24px;background: #EDE8D1;width: 84%;float: right;
+    border-top-left-radius: 26px;
+border-bottom-left-radius: 26px;
+border:#B0B1AB solid 1px;
+border-right: none;
+}
+#meteo h3{font-size: 20px;font-weight: 500;margin: 0;}
+#meteo img{ width: 64px;}
+footer{padding:42px 16px 36px 16px;text-align: center;
+    background:#333 url('../images/footer.png') no-repeat right bottom;
+    background-size: 80px auto;
+    font-size: 14px;
+color:#EEE;}
+
+
+
+
+@media screen and (max-width: 1020px) {
+    #page{margin:auto;border-radius: 0;}
+}
+
+@media screen and (max-width: 650px) {
+header img{width:100px;}
+nav ul li{ float: none;}
+nav ul li a::after{ content: "»";display: block;float: right;}
+
+nav{height: 4px;overflow: hidden;}
+nav.show{height: 216px;}
+nav button{display: block;}
+#flex{display: block;}
+aside, article{float: none;width: auto;overflow: auto;}
+#meteo{border:none;background: transparent;margin: auto;
+    width: auto;
+    float: none;
+    text-align: center;
+}
+
+
+
+}
